@@ -1,0 +1,29 @@
+### Text-to-speech
+POST http://localhost:8080/api/synthesize
+Content-Type: application/json
+Accept: audio/mpeg
+
+{
+  "text": "Olá! Este texto será convertido em áudio."
+}
+
+### Text-to-speech: resposta binária
+# A resposta é um arquivo MP3. Depois de enviar a requisição,
+# use "Save Response Body" no painel do REST Client e salve como audio.mp3.
+
+### Text-to-speech: texto maior
+# POST http://localhost:8080/api/synthesize
+# Content-Type: application/json
+# Accept: audio/mpeg
+
+# {
+#   "text": "Este é um exemplo de uma mensagem maior convertida em áudio pelo endpoint da aplicação."
+# }
+
+POST http://localhost:8080/api/synthesize
+Content-Type: application/json
+Accept: audio/mpeg
+
+{
+  "text": "Tung tung tung tung tung tung tung tung tung Sarrurh!"
+}

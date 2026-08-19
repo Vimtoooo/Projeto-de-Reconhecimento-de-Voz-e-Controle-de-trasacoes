@@ -1,0 +1,13 @@
+### Upload de áudio
+POST http://localhost:8080/api/transcribe
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="Recording-1.m4a"
+Content-Type: audio/m4a
+
+< ./src/test/resources/audio/Recording-1.m4a
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Alternativa usando curl.exe (mais confiável no Windows)
+# curl.exe -X POST "http://localhost:8080/api/transcribe" -F "file=@C:\Users\leone\OneDrive\Desktop\Vito\Work\DIO\Santander AI Java Back-end - 2026\projeto-final\budgeting\src\test\resources\audio\Recording-1.m4a"

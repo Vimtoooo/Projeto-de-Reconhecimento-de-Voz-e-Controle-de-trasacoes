@@ -1,0 +1,32 @@
+### Criar transacao de mercado
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Compras do supermercado",
+  "category": "GROCERIES",
+  "amount": 12550
+}
+
+### Criar transacao de farmacia
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Medicamentos",
+  "category": "PHARMA",
+  "amount": 8900
+}
+
+### Criar transacao de automovel
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{
+  "description": "Combustivel",
+  "category": "AUTO",
+  "amount": 20000
+}
+
+# O campo amount e long. No codigo atual, 12550 sera retornado como 12550.0,
+# e nao como 125.50. Use a unidade esperada pelo seu dominio.
